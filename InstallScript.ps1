@@ -13,7 +13,7 @@ if (-Not (Test-Path $sourceDir)) {
 
 # 🔽 Download DLL from GitHub release
 Write-Host "🌐 Downloading DLL from GitHub..."
-Invoke-WebRequest -Uri $githubDllUrl -OutFile $sourceDll -UseBasicParsing
+Invoke-WebRequest -Uri $githubURL -OutFile $sourceDll -UseBasicParsing
 Write-Host "✅ Downloaded DLL to $sourceDll"
 
 Write-Host "🔧 Copie du DLL dans System32..."
@@ -37,7 +37,7 @@ if ($packages -notcontains $filterName) {
 }
 
 if (-Not (Test-Path "$sourceDir\PasswordFilter.log")) {
-    New-Item -Path "$sourceDir\PasswordPolicy.log" -ItemType File | Out-Null
+    New-Item -Path "$sourceDir\PasswordFilter.log" -ItemType File | Out-Null
     Write-Host "📁 Création du dossier de logs"
 }
 
