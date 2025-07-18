@@ -51,6 +51,11 @@ Exemple content for `banned_words.txt`:
 
 After installation, the password filter will automatically check new passwords against the criteria defined in the DLL and the `banned_words.txt` file. If a password fails validation, it will be rejected, and an entry will be logged in `PasswordFilter.log`.
 
+From client-side, password change request is rejected with error message :
+
+<img width="459" height="425" alt="image" src="https://github.com/user-attachments/assets/86275696-9d0d-4e8b-9198-fec13fed84b2" />
+
+
 Example log entry:
 ```
 [FAILED] User: jdoe | Password: admin123 | Reason: Contains banned word
